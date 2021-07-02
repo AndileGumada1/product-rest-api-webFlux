@@ -1,13 +1,9 @@
 package com.andile.productapp.service;
 
 import com.andile.productapp.dto.ProductDto;
-import com.andile.productapp.entity.Product;
 import com.andile.productapp.repository.ProductRepository;
 import com.andile.productapp.utils.AppUtils;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -17,7 +13,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    //Flux is a class that returns more objects
+    //Flux is a class that returns one to many objects
     public Flux<ProductDto> getProducts(){
         return productRepository.findAll().map(AppUtils::entityToDto);
     }
@@ -26,9 +22,6 @@ public class ProductService {
         return productRepository.findById(id).map(AppUtils::entityToDto);
     }
 
-//    public Flux<ProductDto> getProductInRange(double min, double max){
-//        return productRepository.findByPriceBetween(Range.closed(min,max));
-//    }
     public Mono<ProductDto> saveProduct(Mono<ProductDto> productDtoMono){
         return productDtoMono.map(AppUtils::dtoToEntity)
                 .flatMap(productRepository::save)

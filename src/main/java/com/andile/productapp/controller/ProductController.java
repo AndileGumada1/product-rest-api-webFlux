@@ -29,10 +29,7 @@ public class ProductController {
     public Mono<ProductDto> getProduct(@PathVariable String id){
         return productService.getProduct(id);
     }
-//    @GetMapping("/product-range")
-//    public Flux<ProductDto> getProductInRange(@RequestParam("min") double min,@RequestParam("max") double max){
-//        return productService.getProductInRange(min,max);
-//    }
+
     @PostMapping("/products")
     @ResponseStatus(HttpStatus.OK)
     public Mono<ProductDto> saveProduct(@RequestBody Mono<ProductDto> productDtoMono){

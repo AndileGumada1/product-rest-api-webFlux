@@ -61,3 +61,7 @@ curl   --header "Content-Type: application/json" \
 ```
 http://localhost:8050/product/delete/2
 ```
+### Presentation Link
+```
+https://xgileitcom-my.sharepoint.com/:p:/r/personal/andile_gumada_xgileit_com/_layouts/15/Doc.aspx?sourcedoc=%7B2AC47727-9E25-4868-98D4-761A9883F7C8%7D&file=Presentation.pptx&wdOrigin=OFFICECOM-WEB.START.REC&ct=1624879483344&action=edit&mobileredirect=true&PreviousSessionID=e6b68c4b-4c3d-17c4-2010-1f74d34e5f79&cid=51c34385-df4c-4bca-8350-30720ad9cdb5
+```

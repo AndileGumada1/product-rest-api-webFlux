@@ -1,0 +1,1 @@
+INSERT INTO `productdb`.`product` ( `name`, `qty`, `price`) VALUES (television', '4', '250');

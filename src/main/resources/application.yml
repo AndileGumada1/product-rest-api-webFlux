@@ -1,0 +1,12 @@
+#server:
+#  error:
+#    include-message: always
+#
+#spring:
+#    r2dbc:
+#      url: r2dbc-mysql://127.0.0.1:3306/productdb
+#      username: root
+#      password: root
+
+#    generate-ddl: true
+#    show-sql: true
